@@ -4,10 +4,16 @@ defmodule StillScss.MixProject do
   def project do
     [
       app: :still_scss,
+      description: "A Still preprocessor for .scss files",
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      source_url: "https://github.com/craftweg/still_css",
+      licenses: "MIT",
+      package: [
+        organization: "Craftweg",
+      ]
     ]
   end
 
