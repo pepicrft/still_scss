@@ -33,7 +33,7 @@ defmodule StillScss.MixProject do
   defp deps do
     [
       {:neotoma, "~> 1.7.3", manager: :rebar3, override: true},
-      {:still, "~> 0.6.1"},
+      {:still, "~> 0.7.0"},
       {:sass_compiler, "~> 0.1"}
     ]
   end

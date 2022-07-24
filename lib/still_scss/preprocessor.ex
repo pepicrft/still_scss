@@ -8,7 +8,8 @@ defmodule StillScss.Preprocessor do
   """
   @impl true
   def render(%SourceFile{} = source_file) do
-    {:ok, content} = Sass.compile(source_file.content)
-    %{source_file | content: content}
+    {:ok, content} = Still.Utils.get_input_path(source_file.input_file)
+      |> Sass.compile_file()
+    %{source_file | content: content, extension: ".css"}
   end
 end
