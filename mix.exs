@@ -32,7 +32,8 @@ defmodule StillScss.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:still, "~> 0.7.0", manager: :rebar3, override: true},
+      {:neotoma, "~> 1.7.3", manager: :rebar3, override: true},
+      {:still, "~> 0.7.0"},
       {:sass_compiler, "~> 0.1"}
     ]
   end
