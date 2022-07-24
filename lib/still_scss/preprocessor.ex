@@ -9,6 +9,6 @@ defmodule StillScss.Preprocessor do
   @impl true
   def render(%SourceFile{} = source_file) do
     {:ok, content} = Sass.compile(source_file.content)
-    %{source_file | content: <<>>}
+    %{source_file | content: content}
   end
 end
