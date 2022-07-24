@@ -2,23 +2,43 @@
 
 `still_scss` provides a [Still preprocessor](https://hexdocs.pm/still/preprocessors.html#custom-preprocessors) to support processing .scss files in [Still](https://stillstatic.io/) projects.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `still_scss` to your list of dependencies in `mix.exs`:
+Add the dependency to your project's `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:still_scss, "~> 0.1.0"}
+    {:still_scss, git: "https://github.com/craftweg/still_scss.git"}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/still_scss>.
+Then edit the project's configuration to include the `StillScss.Preprocessor` preprocessor:
 
-## Release
+```exs
+config :still,
+  dev_layout: false,
+  input: Path.join(Path.dirname(__DIR__), "priv/site"),
+  output: Path.join(Path.dirname(__DIR__), "_site"),
+  preprocessors: %{
+    ".scss" => [
+      StillScss.Preprocessor,
+      Still.Preprocessor.OutputPath,
+      Still.Preprocessor.URLFingerprinting,
+      Still.Preprocessor.Save
+    ]
+}
+```
+
+You can then refer to your `.scss` file using the [`link_to_css` helper](https://hexdocs.pm/still/Still.Compiler.TemplateHelpers.html#link_to_css/3):
+
+```slime
+= link_to_css @env, "/css/styles.scss", media: "all"
+```
+
+## Development
+
+### Release
 
 To release a new version of the package bump the verison in `mix.exs` and run `mix hex.publish`. Note that you need to have the right permissions on [hex](https://hex.pm).
