@@ -19,3 +19,6 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/still_scss>.
 
+## Release
+
+To release a new version of the package bump the verison in `mix.exs` and run `mix hex.publish`. Note that you need to have the right permissions on [hex](https://hex.pm).

@@ -10,10 +10,15 @@ defmodule StillScss.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       source_url: "https://github.com/craftweg/still_css",
-      licenses: "MIT",
-      package: [
-        organization: "Craftweg",
-      ]
+      package: package()
+    ]
+  end
+
+  def package do
+    [
+      name: "still_scss",
+      organization: "Craftweg",
+      licenses: ["MIT"]
     ]
   end
 
@@ -27,8 +32,8 @@ defmodule StillScss.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:still, "~> 0.7.0", manager: :rebar3, override: true},
+      {:sass_compiler, "~> 0.1"}
     ]
   end
 end
