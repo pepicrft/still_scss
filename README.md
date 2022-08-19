@@ -1,5 +1,7 @@
 # still_scss
 
+[![still_scss](https://github.com/craftweg/still_scss/actions/workflows/still_scss.yml/badge.svg)](https://github.com/craftweg/still_scss/actions/workflows/still_scss.yml)
+
 `still_scss` provides a [Still preprocessor](https://hexdocs.pm/still/preprocessors.html#custom-preprocessors) to support processing .scss files in [Still](https://stillstatic.io/) projects.
 
 ## Usage
