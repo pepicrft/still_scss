@@ -41,4 +41,4 @@ You can then refer to your `.scss` file using the [`link_to_css` helper](https:/
 
 ### Release
 
-To release a new version of the package bump the verison in `mix.exs` and run `mix hex.publish`. Note that you need to have the right permissions on [hex](https://hex.pm).
+To release a new version of the package bump the version in `mix.exs` and run `mix hex.publish`. Note that you need to have the right permissions on [hex](https://hex.pm).
