@@ -9,7 +9,7 @@ defmodule StillScss.MixProject do
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      source_url: "https://github.com/craftweg/still_css",
+      source_url: "https://github.com/pepicrft/still_css",
       package: package()
     ]
   end
